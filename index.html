@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>قفل گوشی</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      background-image: url('https://i.imgur.com/etBzYMN.png'); /* عکس گوشی */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lockscreen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.0);
+    }
+
+    input {
+      font-size: 24px;
+      padding: 10px;
+      width: 150px;
+      border: none;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 10px;
+      background-color: rgba(255,255,255,0.9);
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #00c853;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lockscreen">
+    <input type="password" id="pass" placeholder="رمز عبور">
+    <button onclick="check()">باز کردن</button>
+  </div>
+
+  <script>
+    function check() {
+      const code = document.getElementById('pass').value;
+      if (code === '1999') {
+        window.location.href = 'chat.html';
+      } else {
+        alert('رمز اشتباه است!');
+      }
+    }
+  </script>
+
+</body>
+</html>
